@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ☕ BuyMeACoffee
 
-## Getting Started
+A **Patreon clone** built with **Next.js** that allows creators to receive donations from supporters.  
+This project integrates **NextAuth (GitHub OAuth)** for authentication, **Razorpay** for payments, and uses **MongoDB with Mongoose** for data storage.  
 
-First, run the development server:
+🏠 HomePage
+![Home Page](screenshots/home.png)
 
+---
+
+## ✨ Features
+- 🔐 **Authentication** using GitHub (NextAuth.js).
+- 👤 **Creator pages** with donation sections.
+- 🏆 **Leaderboard** showing top supporters.
+- 💳 **Razorpay integration** for secure payments.
+- ⚡ **Responsive UI** – works seamlessly on all devices.
+- 📂 **MongoDB Collections:**
+  - `users` – Stores creator and donor details.
+  - `payments` – Stores donation records.
+
+---
+
+## 🛠️ Tech Stack
+- [Next.js](https://nextjs.org/)  
+- [NextAuth.js](https://next-auth.js.org/)  
+- [Razorpay](https://razorpay.com/)  
+- [MongoDB](https://www.mongodb.com/)  
+- [Mongoose](https://mongoosejs.com/)  
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/your-username/BuyMeACoffee.git
+cd BuyMeACoffee
+```
+### 2. Install dependencies
+```bash
+npm install
+# or
+yarn install
+```
+### 3. Configure environment variables
+
+### 4. 4. Run the project
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+Project will be available at: http://localhost:3000
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+📸 Screenshots
+🏠 Login
+![Login Page](screenshots/login.png)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+👤 Creator Dashboard
+![Creator Dashboard](screenshots/dashboard.png)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🙎🏻 Your Page
+![YourPage](screenshots/yourpage.png)
 
-## Learn More
+## 🤝 Contributing
 
-To learn more about Next.js, take a look at the following resources:
+Pull requests are welcome! If you'd like to make major changes, please open an issue first to discuss.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ⭐ Show Your Support
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+If you like this project, consider giving it a ⭐ on GitHub!
+Made By Daksh
