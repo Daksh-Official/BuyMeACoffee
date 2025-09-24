@@ -33,7 +33,7 @@ This project integrates **NextAuth (GitHub OAuth)** for authentication, **Razorp
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/your-username/BuyMeACoffee.git
+git clone https://github.com/Daksh-Official/BuyMeACoffee.git
 cd BuyMeACoffee
 ```
 ### 2. Install dependencies
@@ -66,5 +66,5 @@ Pull requests are welcome! If you'd like to make major changes, please open an i
 
 ## ⭐ Show Your Support
 
-If you like this project, consider giving it a ⭐ on GitHub!
+If you like this project, consider giving it a ⭐ on GitHub!<br>
 Made By Daksh
