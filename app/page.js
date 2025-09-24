@@ -1,103 +1,85 @@
-import Image from "next/image";
+"use client"
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  const [search, setsearch] = useState("");
+  const router = useRouter();
+
+  const handleChange = (e) => {
+    setsearch(e.target.value);
+
+  }
+
+  const handleSearch = () => {
+    router.push(`/${search}`);
+  }
+
+
+
+  return (
+    <div className="mx-auto">
+      <div className="main p-2 min-h-[85vh] w-full mt-16 pb-20 text-lg">
+        <div className="start flex w-full px-2 md:w-1/2 justify-center min-h-90  gap-5 flex-col mx-auto items-center">
+          <h2 className="flex items-center font-bold text-4xl"><span>Buy Me A <span className='text-pink-500'>Coffee</span></span><lord-icon src="https://cdn.lordicon.com/oxoipcmc.json" trigger="hover" className="md:w-[100px] md:h-[100px] w-16 h-16">
+          </lord-icon></h2>
+          <p className="text-center text-gray-400">Empower your favorite creators by buying them a coffee—show your appreciation, support their work, and help them keep creating the content you love.</p>
+          <div className="buttons gap-3 flex my-2">
+            <button type="button" className="text-white  bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none cursor-pointer focus:ring-purple-200 dark:focus:ring-purple-800 font-bold rounded-lg text-md px-5 py-2.5 text-center me-2">Get Started</button>
+            <Link href="/about"><button type="button" className="text-white cursor-pointer bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-bold rounded-lg text-md px-5 py-2.5 text-center me-2">Read More</button></Link></div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <div className="w-full justify-center items-center flex">
+          <input type="search" placeholder="Search your favorite creator and donate..." className="w-[90%] bg-gray-900 h-14 px-5 rounded-xl" name="search" id="search" onChange={handleChange} value={search} />
+          <button onClick={handleSearch} className="absolute  right-5 md:right-22 inline-flex items-center cursor-pointer justify-center p-0.5 me-1 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
+            <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-transparent group-hover:dark:bg-transparent">
+              Search
+            </span>
+          </button>
+        </div>
+        <div className="features flex h-80 gap-12 justify-center w-full flex-col my-8 items-center">
+          <h2 className="font-bold text-2xl">Help the Community</h2>
+          <ul className="flex w-full justify-around">
+            <li>
+              <div className="text-md max-w-24 md:max-w-fit flex w-fit items-center h-52 justify-between flex-col">
+                <div className="p-2 rounded-full my-2 bg-gray-800">
+                  <img src="/icons/icon1.svg" className="md:w-[88px] w-18" alt="" />
+                </div>
+                <h3 className="font-bold">Donate</h3>
+                <p className="text-gray-400 text-xs text-center md:text-sm">donate to your favorite creator</p>
+              </div>
+            </li>
+            <li>
+              <div className="text-md flex max-w-24 md:max-w-fit w-fit items-center h-52 justify-between flex-col">
+                <div className="p-2 rounded-full my-2 bg-gray-800">
+                  <img src="/icons/icon2.svg" className="md:w-[88px] w-18" alt="" />
+                </div>
+                <h3 className="font-bold">Contribute</h3>
+                <p className="text-gray-400 text-xs text-center md:text-sm">Contribute in helping the Community</p>
+              </div>
+            </li>
+            <li>
+              <div className="text-md flex max-w-24 md:max-w-fit w-fit items-center h-52 justify-between text-center flex-col">
+                <div className="p-2 rounded-full my-2 bg-gray-800">
+                  <img src="/icons/icon3.svg" className="md:w-[88px] w-18" alt="" />
+                </div>
+                <h3 className="font-bold">Around the Clock</h3>
+                <p className="text-gray-400 text-xs text-center md:text-sm">You can do this any time you want</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div className="w-full h-[0.1px] bg-gray-700"></div>
+        <div className="know my-12">
+          <h2 className="font-bold text-2xl text-center">Know more about us</h2>
+          <iframe src="https://www.youtube.com/embed/sF80I-TQiW0?si=jxZPlz0V-cO-2czA" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" className="rounded-lg mx-auto my-12 md:w-[560px] md:h-[315px]" ></iframe>
+          <p className="text-sm text-gray-400 text-center m-5 md:m-15">
+            "Buy Me A Coffee is a platform designed to empower creators and foster a supportive community. Whether you’re an artist, writer, developer, or any kind of creator, this site enables your fans and supporters to show appreciation for your work through small donations—symbolized by buying you a coffee. The intuitive interface makes it easy for users to search for their favorite creators, read about their journeys, and contribute directly to their creative pursuits. With features like seamless search, quick donation options, and informative content about the community, Buy Me A Coffee bridges the gap between creators and their audiences."
+
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
