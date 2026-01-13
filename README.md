@@ -4,7 +4,7 @@ A **Patreon clone** built with **Next.js** that allows creators to receive donat
 This project integrates **NextAuth (GitHub OAuth)** for authentication, **Razorpay** for payments, and uses **MongoDB with Mongoose** for data storage.  
 
 🏠 HomePage
-![Home Page](https://github.com/Daksh-Official/BuyMeACoffee/blob/main/screenshots/home.png?raw=true)
+![Home Page](https://raw.githubusercontent.com/Daksh-Official/BuyMeACoffee/refs/heads/main/screenshots/home.png)
 
 ---
 
@@ -52,13 +52,13 @@ Project will be available at: http://localhost:3000
 
 📸 Screenshots
 🏠 Login
-![Login Page](https://github.com/Daksh-Official/BuyMeACoffee/blob/main/screenshots/login.png?raw=true)
+![Login Page](https://raw.githubusercontent.com/Daksh-Official/BuyMeACoffee/refs/heads/main/screenshots/login.png)
 
 👤 Creator Dashboard
-![Creator Dashboard](https://github.com/Daksh-Official/BuyMeACoffee/blob/main/screenshots/dashboard.png?raw=true)
+![Creator Dashboard](https://raw.githubusercontent.com/Daksh-Official/BuyMeACoffee/refs/heads/main/screenshots/dashboard.png)
 
 🙎🏻 Your Page
-![YourPage](https://github.com/Daksh-Official/BuyMeACoffee/blob/main/screenshots/yourpage.png?raw=true)
+![YourPage](https://raw.githubusercontent.com/Daksh-Official/BuyMeACoffee/refs/heads/main/screenshots/yourpage.png)
 
 ## 🤝 Contributing
 
