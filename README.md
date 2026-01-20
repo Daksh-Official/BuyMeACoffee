@@ -43,12 +43,13 @@ npm install
 yarn install
 ```
 ### 3. Configure environment variables
-URI = mongodb://localhost:27017/buymeacoffee
-GITHUB_ID = 
-GITHUB_SECRET = 
-NEXT_PUBLIC_URL = http://localhost:3000
-NEXTAUTH_URL= http://localhost:3000
-NEXTAUTH_SECRET= ffef
+
+- URI = mongodb://localhost:27017/buymeacoffee
+- GITHUB_ID = 
+- GITHUB_SECRET = 
+- NEXT_PUBLIC_URL = http://localhost:3000
+- NEXTAUTH_URL= http://localhost:3000
+- NEXTAUTH_SECRET= ffef
 
 ### 4. 4. Run the project
 ```bash
